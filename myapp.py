@@ -27,7 +27,7 @@ def make_rec():
             prediction = None
             print("An error occurred:", e)
         
-        return {"salary":prediction}
+        return {"salary":str(prediction)}
 
 if __name__ == "__main__":
     flask_app_obj.run(host='0.0.0.0', port=80)
