@@ -13,7 +13,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the application files to the container
 COPY . .
 
-# Specify the command to run the application using Gunicorn
+# Specify the command to run the application
 EXPOSE 80
 CMD ["python", "myapp.py"]
 

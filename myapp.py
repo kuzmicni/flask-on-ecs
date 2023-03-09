@@ -16,9 +16,9 @@ def hi_there():
 def make_rec():
   if request.method == "POST":
         data = request.get_json() 
-        yrs = int(data["years"])
+        yrs = float(data["years"])
         input_value = np.array([[yrs]])
-        # Test API: curl -X POST http://0.0.0.0:80/recms -H 'Content-Type: application/json' -d '{"years":"5"}'
+        # Test API: curl -X POST http://0.0.0.0:80/recms -H 'Content-Type: application/json' -d '{"years":"2.5"}'
         try: 
             prediction = ml_model.predict(input_value)[0]
             
